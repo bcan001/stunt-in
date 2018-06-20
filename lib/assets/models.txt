@@ -1,0 +1,38 @@
+ROUGH DRAFT MODELS:
+=======
+User (has_many Items, item type of 'sale' or 'buy')
+
+
+Item (belongs to User, sale_type='sale','buy'). schema: user_id, sale_type, name, description, cost, item_type=top,bottom,footwear,accessories) (has_many bids) (has_many images) 
+
+
+Bid (belongs_to user, belongs to Item)
+
+
+Image (belongs_to item)
+
+
+Message (questions about item, direct messages) (belongs_to user, belongs_to item)
+
+
+Favorite (belongs to user, belongs_to item). use same favorite model/system as City-Go
+
+
+The search bar part:
+
+Designer (has_many items) (has_many images)
+
+
+
+
+
+
+=========
+ideas:
+
+DO THIS APP IN REACT JS WITH RAILS BACKEND
+
+
+tutorial to set up rails app:
+https://x-team.com/blog/get-in-full-stack-shape-with-rails-5-1-webpacker-and-reactjs/
+
