@@ -33,6 +33,42 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# ==========================================
+# added gems here:
+gem 'devise'
+gem 'kaminari'
+gem 'pry-rails'
+# ==========================================
+
+
+# ==========================================
+# --------------------------------------
+
+# https://mkdev.me/en/posts/rails-5-vue-js-how-to-stop-worrying-and-love-the-frontend
+# tutorial for vue.js + webpack
+
+# configure if node wont update because of homebrew:
+# remove excess folders (remove node_modules folder: /usr/local/lib/node_modules, remove node folder: /usr/local/include and delete any node and node_modules directory)
+# brew uninstall node
+# nvm install command: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash (http://nodesource.com/blog/installing-node-js-tutorial-using-nvm-on-mac-os-x-and-ubuntu/)
+# nvm install node
+# brew install yarn --without-node
+# on prod box: 
+# upgrade node
+# npm install --global yarn
+
+# continue with tutorial
+
+
+# how to implement grid component into app:
+# https://vuejs.org/v2/examples/grid-component.html
+
+# foreman gem:
+# https://github.com/yegrb/yeg-wiki/wiki/Managing-application-processes-with-the-Foreman-gem
+
+gem 'webpacker'
+gem 'foreman'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
