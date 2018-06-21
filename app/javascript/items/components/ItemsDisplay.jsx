@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import queryString from 'query-string';
 import axios from 'axios';
 
+import ItemDisplay from './ItemDisplay';
+
+
 class ItemsDisplay extends React.Component {
   constructor () {
     super();
@@ -52,7 +55,7 @@ class ItemsDisplay extends React.Component {
     return (
       <div>
         {this.state.items.map((itm, index) => (
-            <p>{itm.name}</p>
+          <ItemDisplay key={index} item={itm}/>
         ))}
       </div>
     );
