@@ -33,8 +33,8 @@ class ItemsDisplay extends React.Component {
     axios.get( `api/items` )
       .then(response => {
         this.setState({ items: response.data });
-        // console.log(response.data);
-        // console.log(this.state.items);
+        console.log(response.data);
+        console.log(this.state.items);
       })
       .catch(error => {
         console.error(error);
@@ -46,7 +46,6 @@ class ItemsDisplay extends React.Component {
   // }
 
   componentDidMount () {
-    // this.fetchItem(1);
     this.fetchItems();
   }
 
