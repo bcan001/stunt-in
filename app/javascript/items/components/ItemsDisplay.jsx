@@ -6,6 +6,8 @@ import axios from 'axios';
 import ItemDisplay from './ItemDisplay';
 
 
+
+
 class ItemsDisplay extends React.Component {
   constructor () {
     super();
@@ -49,10 +51,12 @@ class ItemsDisplay extends React.Component {
 
   render () {
     return (
-      <div>
-        {this.state.items.map((itm, index) => (
-          <ItemDisplay key={index} item={itm}/>
-        ))}
+      <div className='container pad20-top'>
+        <div className='row'>
+          {this.state.items.map((itm, index) => (
+            <ItemDisplay key={index} item={itm}/>
+          ))}
+        </div>
       </div>
     );
   }
