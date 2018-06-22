@@ -10,10 +10,7 @@ class ItemsDisplay extends React.Component {
   constructor () {
     super();
     this.state = {
-      items: [
-        {name: 'Rag and Bone T-shirt'},
-        {name: 'Rag and Bone Jeans'}
-      ]
+      items: []
     };
   }
 
