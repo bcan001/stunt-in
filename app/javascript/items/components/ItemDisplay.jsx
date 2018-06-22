@@ -5,12 +5,23 @@ import axios from 'axios';
 
 // import ItemsDisplay from './ItemsDisplay';
 
+// const cardStyle = {
+//   width: '18rem'
+// };
+
+const itemDisplayImageSize = {
+  height: '18rem'
+};
+
+import itemDisplayImage from '../../../assets/images/item-placeholder.png';
+
+
 class ItemDisplay extends React.Component {
   constructor (props) {
     super(props);
-    // this.state = {
-    //   item: props.item
-    // };
+    this.state = {
+      item: props.item
+    };
   }
 
   // componentWillMount () {
@@ -19,7 +30,8 @@ class ItemDisplay extends React.Component {
 
   // componentDidMount () {
   //   // this.fetchItem(1);
-  //   this.fetchItem();
+  //   // this.fetchItem();
+  //   console.log(this.props.item);
   // }
 
   // 
@@ -30,12 +42,21 @@ class ItemDisplay extends React.Component {
   };
 
 
+  // changeStateExample () {
+  //   console.log('hello there');
+  //   this.setState({item: {id: 1, name: 'new name', price: '2000'}});
+  //   console.log(this.state.item);
+  // }
+
+
+
   render () {
     return (
-      <div className='container'>
-        <div className='row pad20-top'>
-        	Item is:
-          <a onClick={() => this.handleClick(this.props.item.id)} style={{cursor: 'pointer'}}>{this.props.item.name}</a>
+      <div className='col-sm-3'>
+        <div className='card'>
+          <img src={itemDisplayImage} style={itemDisplayImageSize}/>
+          <a onClick={() => this.handleClick(this.state.item.id)} style={{cursor: 'pointer'}}>{this.state.item.name}</a>
+          <p>{this.state.item.price}</p>
         </div>
       </div>
     );
