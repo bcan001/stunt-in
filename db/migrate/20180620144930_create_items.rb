@@ -2,14 +2,18 @@ class CreateItems < ActiveRecord::Migration[5.2]
   def change
     create_table :items do |t|
     	t.integer :user_id
+        t.string :designer
     	t.string :name
     	t.text :description
     	t.decimal :price, :precision => 8, :scale => 2
-    	t.string :category # top,bottom,footwear,accessories
+    	t.string :category 
+        # t.integer :category_id # top,bottom,footwear,accessories
     	t.string :size
     	t.string :brand
+        t.datetime :expires_at
     end
     add_index :items, :user_id
+    add_index :items, :designer
     add_index :items, :category
     add_index :items, :size
     add_index :items, :brand

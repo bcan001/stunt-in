@@ -52,7 +52,7 @@ class ItemsDisplay extends React.Component {
   render () {
     return (
       <div className='container pad20-top'>
-        <div className='row'>
+        <div className='row row-eq-height'>
           {this.state.items.map((itm, index) => (
             <ItemDisplay key={index} item={itm}/>
           ))}

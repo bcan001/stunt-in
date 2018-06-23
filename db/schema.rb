@@ -10,20 +10,78 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_20_150339) do
+ActiveRecord::Schema.define(version: 2018_06_23_132232) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "published_at"
+    t.string "author"
+    t.index ["published_at"], name: "index_articles_on_published_at"
+  end
+
+  create_table "bids", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "item_id"
+    t.decimal "price", precision: 8, scale: 2
+    t.datetime "expires_at"
+    t.index ["item_id"], name: "index_bids_on_item_id"
+    t.index ["user_id"], name: "index_bids_on_user_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.index ["name"], name: "index_categories_on_name"
+  end
+
+  create_table "designers", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.index ["name"], name: "index_designers_on_name"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "like_type"
+    t.integer "like_id"
+    t.index ["like_type", "like_id"], name: "index_favorites_on_like_type_and_like_id"
+    t.index ["user_id", "like_type"], name: "index_favorites_on_user_id_and_like_type"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "parent_type"
+    t.integer "parent_id"
+    t.string "url"
+    t.index ["parent_type", "parent_id"], name: "index_images_on_parent_type_and_parent_id"
+  end
 
   create_table "items", force: :cascade do |t|
     t.integer "user_id"
+    t.string "designer"
     t.string "name"
     t.text "description"
     t.decimal "price", precision: 8, scale: 2
     t.string "category"
     t.string "size"
     t.string "brand"
+    t.datetime "expires_at"
     t.index ["brand"], name: "index_items_on_brand"
     t.index ["category"], name: "index_items_on_category"
+    t.index ["designer"], name: "index_items_on_designer"
     t.index ["size"], name: "index_items_on_size"
     t.index ["user_id"], name: "index_items_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer "from_user_id"
+    t.integer "to_user_id"
+    t.string "title"
+    t.text "description"
+    t.string "send_type"
+    t.integer "send_id"
+    t.index ["from_user_id"], name: "index_messages_on_from_user_id"
+    t.index ["send_type", "send_id"], name: "index_messages_on_send_type_and_send_id"
+    t.index ["to_user_id"], name: "index_messages_on_to_user_id"
   end
 
   create_table "users", force: :cascade do |t|
