@@ -1,7 +1,8 @@
 class Api::ItemsController < ApplicationController
 
 	def index
-		@items = Item.all
+		# @items = Item.all
+		@items = Item.select(:id,:name,:price,:category,:size,:brand)
 	end
 
   def show
@@ -10,3 +11,7 @@ class Api::ItemsController < ApplicationController
 
 
 end
+
+
+
+

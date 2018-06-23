@@ -13,6 +13,11 @@ const itemDisplayImageSize = {
   height: '18rem'
 };
 
+const cardStyle = {
+  height: '100%'
+};
+
+
 import itemDisplayImage from '../../../assets/images/item-placeholder.png';
 
 
@@ -52,8 +57,8 @@ class ItemDisplay extends React.Component {
 
   render () {
     return (
-      <div className='col-sm-3'>
-        <div className='card'>
+      <div className='col-sm-3 pad20-top pad20-bottom'>
+        <div className='card' style={cardStyle}>
           <img src={itemDisplayImage} style={itemDisplayImageSize}/>
           <a onClick={() => this.handleClick(this.state.item.id)} style={{cursor: 'pointer'}}>{this.state.item.name}</a>
           <p>{this.state.item.price}</p>

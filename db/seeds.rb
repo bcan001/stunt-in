@@ -42,6 +42,51 @@ item2 = user.items.build(
 )
 item2.save
 
+item3 = user.items.build(
+	name: 'Broke City Gold Denim Jacket',
+	description: 'This is an awesome denim jacket bought in Japan!',
+	price: 20.00,
+	category: 'top',
+	size: 'M',
+	brand: 'Broke City Gold'
+)
+item3.save
+
+item4 = user.items.build(
+	name: 'Rag and Bone Jeans 34',
+	description: 'These are some Jeans from Rag and Bone.',
+	price: 20.00,
+	category: 'bottom',
+	size: '34',
+	brand: 'Rag and Bone'
+)
+item4.save
+
+item5 = user.items.build(
+	name: 'Levis Denim Jacket',
+	description: 'This is an awesome denim jacket bought in Portland!',
+	price: 20.00,
+	category: 'top',
+	size: 'M',
+	brand: 'Levis'
+)
+item5.save
+
+item6 = user.items.build(
+	name: 'Jordan 1 Size 9 Shattered Backboards',
+	description: 'These are some Jordan 1s.',
+	price: 20.00,
+	category: 'shoes',
+	size: '9',
+	brand: 'Air Jordan'
+)
+item6.save
+
+article1 = Article.create(title: 'article1', description: 'this is the description', published_at: Time.now.to_datetime, author: 'Ben Caneba')
+
+article2 = Article.create(title: 'article2', description: 'this is the description', published_at: Time.now.to_datetime, author: 'Ben Caneba')
+
+article3 = Article.create(title: 'article3', description: 'this is the description', published_at: Time.now.to_datetime, author: 'Ben Caneba')
 
 
 

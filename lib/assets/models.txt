@@ -15,7 +15,7 @@ Image (belongs_to item)
 Message (questions about item, direct messages) (belongs_to user, belongs_to item)
 
 
-Favorite (belongs to user, belongs_to item). use same favorite model/system as City-Go
+Favorite (belongs to user, belongs_to item)
 
 
 The search bar part:
@@ -47,6 +47,10 @@ https://github.com/rails/jbuilder
 
 
 
+---------------
+to do:
+models / spec tests. both js and ruby. NEED TO INSTALL RSPEC AND MOCHA
+how to handle images / hosting ?
 
 
 
