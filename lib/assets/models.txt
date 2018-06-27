@@ -47,12 +47,21 @@ https://github.com/rails/jbuilder
 
 
 
+
 ---------------
 to do:
 models / spec tests. both js and ruby. NEED TO INSTALL RSPEC AND MOCHA
 how to handle images / hosting ?
 
 
+
+
+infinite scroll component in react:
+1. only render first 8 items on page
+2. when they go down, when it reaches a certain point, append 8 more items to the current state of the app. repeat the process
+
+https://stackoverflow.com/questions/21238667/infinite-scrolling-with-react-js
+http://voidcanvas.com/implementing-infinite-scroll-with-react-js-without-plugin/
 
 
 

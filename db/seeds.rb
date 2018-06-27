@@ -72,15 +72,17 @@ item5 = user.items.build(
 )
 item5.save
 
-item6 = user.items.build(
-	name: 'Jordan 1 Size 9 Shattered Backboards',
-	description: 'These are some Jordan 1s.',
-	price: 20.00,
-	category: 'shoes',
-	size: '9',
-	brand: 'Air Jordan'
-)
-item6.save
+40.times do
+	item6 = user.items.build(
+		name: 'Jordan 1 Size 9 Shattered Backboards',
+		description: 'These are some Jordan 1s.',
+		price: 20.00,
+		category: 'shoes',
+		size: '9',
+		brand: 'Air Jordan'
+	)
+	item6.save
+end
 
 article1 = Article.create(title: 'article1', description: 'this is the description', published_at: Time.now.to_datetime, author: 'Ben Caneba')
 
