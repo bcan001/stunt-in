@@ -48,15 +48,21 @@ class ItemsDisplay extends React.Component {
     this.fetchItems();
   }
 
+  
 
   render () {
     return (
-      <div className='container pad20-top'>
+      <div ref="iScroll" className='container pad20-top'>
         <div className='row row-eq-height'>
           {this.state.items.map((itm, index) => (
             <ItemDisplay key={index} item={itm}/>
           ))}
         </div>
+        {this.state.loadingState
+          ? <p className="loading">
+          loading More Items..
+        </p>
+          : ""}
       </div>
     );
   }
