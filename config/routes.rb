@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root 'pages#index'
+  
+  get 'api/items/fetch_items', :to => 'api/items#fetch_items', :as => 'fetch_items'
+
   namespace :api, defaults: { format: :json } do
-  	get 'items/fetch_items', :to => 'items#fetch_items', :as => 'fetch_items'
     resources :items
   end
 

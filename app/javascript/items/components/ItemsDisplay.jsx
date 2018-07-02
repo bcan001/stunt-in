@@ -12,7 +12,9 @@ class ItemsDisplay extends React.Component {
   constructor () {
     super();
     this.state = {
-      items: []
+      items: [],
+      isLoading: false,
+      page: 1
     };
   }
 
@@ -40,15 +42,54 @@ class ItemsDisplay extends React.Component {
       });
   }
 
+  fetchMoreItems (page) {
+    axios.get( `api/items/fetch_items?page=${page}` )
+      .then(response => {
+        // this.setState({ items: response.data });
+        // console.log(response.data);
+        // console.log(this.state.items);
+
+        console.log('returned more items');
+        console.log(response.data);
+
+        this.setState({ 
+          isLoading: false,
+          page: this.state.page + 1
+        });
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
   // componentWillMount () {
   //   this.fetchItem(1);
   // }
 
   componentDidMount () {
     this.fetchItems();
+    window.addEventListener('scroll', this.onScroll, false);
   }
 
-  
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll, false);
+  }
+
+  onScroll = () => {
+    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight) && this.state.items.length &&
+        !this.state.isLoading) {
+      // this.props.onPaginatedSearch();
+      // console.log('hello there');
+
+      this.setState({ 
+        isLoading: true
+      });
+
+      this.fetchMoreItems(this.state.page);
+
+    }
+  }
+
 
   render () {
     return (
@@ -58,11 +99,6 @@ class ItemsDisplay extends React.Component {
             <ItemDisplay key={index} item={itm}/>
           ))}
         </div>
-        {this.state.loadingState
-          ? <p className="loading">
-          loading More Items..
-        </p>
-          : ""}
       </div>
     );
   }

@@ -11,10 +11,12 @@ class Api::ItemsController < ApplicationController
 
 	# for infitinite scrolls
 	def fetch_items
-		@item_count = params[:item_count]
+		@page = params[:page]
 
 		puts 'items are now fetched:'
-		puts @item_count
+		puts @page
+
+		render json: @page.to_i + 1
 	end
 
 
