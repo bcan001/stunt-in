@@ -13,10 +13,22 @@ class Api::ItemsController < ApplicationController
 	def fetch_items
 		@page = params[:page]
 
-		puts 'items are now fetched:'
-		puts @page
+		# puts 'items are now fetched:'
+		# puts @page
 
-		render json: @page.to_i + 1
+		@start = (@page.to_i*10)
+		# @end = @start + 9
+
+		sleep(0.5)
+
+		@items = Item.select(:id,:name,:price,:category,:size,:brand).offset(@start).limit(8)
+		if @items.empty?
+			@all_loaded = true
+		else
+			@all_loaded = false
+		end
+
+		render json: {page: @page.to_i + 1, items: @items, all_loaded: @all_loaded}
 	end
 
 
