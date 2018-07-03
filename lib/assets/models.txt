@@ -66,6 +66,13 @@ http://voidcanvas.com/implementing-infinite-scroll-with-react-js-without-plugin/
 
 
 
+best tutorial on infinite scroll:
+http://blog.sodhanalibrary.com/2016/08/detect-when-user-scrolls-to-bottom-of.html#.WzliYhJKjOQ
+
+
+
+
+
 
 
 
