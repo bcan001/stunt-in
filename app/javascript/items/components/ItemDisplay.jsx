@@ -62,6 +62,8 @@ class ItemDisplay extends React.Component {
           <img src={itemDisplayImage} style={itemDisplayImageSize}/>
           <a onClick={() => this.handleClick(this.state.item.id)} style={{cursor: 'pointer'}}>{this.state.item.name}</a>
           <p>{this.state.item.price}</p>
+          <p>{this.state.item.posted_at}</p>
+          <p>{this.state.item.expires_at}</p>
         </div>
       </div>
     );

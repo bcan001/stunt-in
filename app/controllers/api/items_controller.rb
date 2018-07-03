@@ -2,7 +2,7 @@ class Api::ItemsController < ApplicationController
 
 	def index
 		# @items = Item.all
-		@items = Item.select(:id,:name,:price,:category,:size,:brand).take(12)
+		@items = Item.select(:id,:name,:price,:category,:size,:brand,:posted_at,:expires_at).take(12)
 	end
 
   def show
@@ -21,7 +21,7 @@ class Api::ItemsController < ApplicationController
 
 		sleep(0.5)
 
-		@items = Item.select(:id,:name,:price,:category,:size,:brand).offset(@start).limit(8)
+		@items = Item.select(:id,:name,:price,:category,:size,:brand,:posted_at,:expires_at).offset(@start).limit(8)
 		if @items.empty?
 			@all_loaded = true
 		else
