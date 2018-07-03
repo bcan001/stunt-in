@@ -28,7 +28,9 @@ item1 = user.items.build(
 	price: 20.00,
 	category: 'top',
 	size: 'M',
-	brand: 'All Saints'
+	brand: 'All Saints',
+	posted_at: Time.now.to_datetime,
+	expires_at: (Time.now.to_datetime + 100)
 )
 item1.save
 
@@ -38,7 +40,9 @@ item2 = user.items.build(
 	price: 20.00,
 	category: 'bottom',
 	size: '34',
-	brand: 'All Saints'
+	brand: 'All Saints',
+	posted_at: Time.now.to_datetime,
+	expires_at: (Time.now.to_datetime + 100)
 )
 item2.save
 
@@ -48,7 +52,9 @@ item3 = user.items.build(
 	price: 20.00,
 	category: 'top',
 	size: 'M',
-	brand: 'Broke City Gold'
+	brand: 'Broke City Gold',
+	posted_at: Time.now.to_datetime,
+	expires_at: (Time.now.to_datetime + 100)
 )
 item3.save
 
@@ -58,7 +64,9 @@ item4 = user.items.build(
 	price: 20.00,
 	category: 'bottom',
 	size: '34',
-	brand: 'Rag and Bone'
+	brand: 'Rag and Bone',
+	posted_at: Time.now.to_datetime,
+	expires_at: (Time.now.to_datetime + 100)
 )
 item4.save
 
@@ -68,7 +76,9 @@ item5 = user.items.build(
 	price: 20.00,
 	category: 'top',
 	size: 'M',
-	brand: 'Levis'
+	brand: 'Levis',
+	posted_at: Time.now.to_datetime,
+	expires_at: (Time.now.to_datetime + 100)
 )
 item5.save
 
@@ -79,7 +89,9 @@ item5.save
 		price: 20.00,
 		category: 'shoes',
 		size: '9',
-		brand: 'Air Jordan'
+		brand: 'Air Jordan',
+		posted_at: Time.now.to_datetime,
+		expires_at: (Time.now.to_datetime + 100)
 	)
 	item6.save
 end

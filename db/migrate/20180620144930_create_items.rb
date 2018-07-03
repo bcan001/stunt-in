@@ -10,6 +10,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
         # t.integer :category_id # top,bottom,footwear,accessories
     	t.string :size
     	t.string :brand
+        t.datetime :posted_at
         t.datetime :expires_at
     end
     add_index :items, :user_id

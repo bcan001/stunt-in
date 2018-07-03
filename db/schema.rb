@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2018_06_23_132232) do
     t.string "category"
     t.string "size"
     t.string "brand"
+    t.datetime "posted_at"
     t.datetime "expires_at"
     t.index ["brand"], name: "index_items_on_brand"
     t.index ["category"], name: "index_items_on_category"
