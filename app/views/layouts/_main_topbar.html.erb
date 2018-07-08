@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-navbar">
+  <%= link_to 'Stunt-In', root_path, class: 'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <%= link_to "Designers", root_path, class: 'nav-link' %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "Outerwear", root_path, class: 'nav-link' %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "Tops", root_path, class: 'nav-link' %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "Bottoms", root_path, class: 'nav-link' %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "Shoes", root_path, class: 'nav-link' %>
+      </li>
+   
+
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+
+      <!-- devise feature test here -->
+    
+        <li class="nav-item">
+          <%= link_to 'My Profile', root_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Sign Out', root_path, :method=>'delete', class: 'nav-link' %>
+        </li>
+  
+        <li class="nav-item">
+          <%= link_to 'Sign In', root_path, class: 'nav-link' %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to 'Register', root_path, class: 'nav-link' %>
+        </li>
+    
+
+
+    </ul>
+
+
+    <%= form_tag root_path, :method => :get, class: 'form-inline my-2 my-lg-0 search-form' do %>
+	    <%= text_field_tag 'search', '' ,placeholder: 'Search Stunt-In', class: 'form-control mr-sm-2' %>
+
+	    <%= button_tag 'Search', class: 'btn btn-outline-success my-2 my-sm-0' %>
+	  <% end %>
+
+	    
+
+
+  </div>
+</nav>
+
+
+
+
+
+
+
