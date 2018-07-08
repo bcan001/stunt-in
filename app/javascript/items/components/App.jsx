@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import ItemsDisplay from './ItemsDisplay'
 
+
 const App = (props) => (
   <Router>
 	<div>
