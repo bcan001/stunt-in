@@ -56,6 +56,7 @@ how to handle images / hosting ?
 
 
 
+
 infinite scroll component in react:
 1. only render first 8 items on page
 2. when they go down, when it reaches a certain point, append 8 more items to the current state of the app. repeat the process
@@ -73,11 +74,25 @@ http://blog.sodhanalibrary.com/2016/08/detect-when-user-scrolls-to-bottom-of.htm
 
 
 
+======
+NO DESIGNER. USE BRAND INSTEAD ON ITEMS
+
 
 
 
 ======
-NO DESIGNER. USE BRAND INSTEAD ON ITEMS
+to do:
+- install mocha test unit. need more experience with it through stat-box
+- work on sign in/ sign out feature and tests.
+- homepage needs:
+	- search feature
+	- articles feature
+	- 'shop our favorites' scrollbar
+
+
+
+
+
 
 
 

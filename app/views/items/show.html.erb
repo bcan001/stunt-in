@@ -1,9 +1,9 @@
 <div class="container pad40-top">
 	<div class="row">
-		<div class="col-sm-8">
-			hi
+		<div class="col-sm-7">
+			<%= image_tag 'item-placeholder.png', width: '100%' %>
 		</div>
-		<div class="col-sm-4">
+		<div class="col-sm-5">
 			<p>name: <%= @item.name %></p>
 			<p>description: <%= @item.description %></p>
 			<p>price: <%= @item.price %></p>
@@ -14,6 +14,22 @@
 			<p>expires_at: <%= @item.expires_at %></p>
 		</div>
 	</div>
-</div>
 
+	<div class="text-center pad40-top">
+		Similar Listings
+	</div>
+
+
+	<!-- similar listings here -->
+
+
+	<div class="text-center pad40-top">
+		Discussion
+	</div>
+
+
+	<!-- form to add comments here -->
+
+
+</div>
 
