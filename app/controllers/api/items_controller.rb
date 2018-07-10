@@ -31,8 +31,21 @@ class Api::ItemsController < ApplicationController
 		render json: {page: @page.to_i + 1, items: @items, all_loaded: @all_loaded}
 	end
 
+	def fetch_similar_items
+		@items = Item.take(4)
+
+		render json: {items: @items}
+	end
+
 
 end
+
+
+
+
+
+
+
 
 
 

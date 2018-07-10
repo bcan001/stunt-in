@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root 'pages#index'
   
   get 'api/items/fetch_items', :to => 'api/items#fetch_items', :as => 'fetch_items'
+  get 'api/items/fetch_similar_items', :to => 'api/items#fetch_similar_items', :as => 'fetch_similar_items'
+
 
   namespace :api, defaults: { format: :json } do
     resources :items

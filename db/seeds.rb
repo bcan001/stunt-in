@@ -94,6 +94,9 @@ item5.save
 		expires_at: (Time.now.to_datetime + 100)
 	)
 	item6.save
+
+	comment = user.comments.build(item_id: item6.id, content: 'Nice Shoes!')
+	comment.save
 end
 
 article1 = Article.create(title: 'article1', description: 'this is the description', published_at: Time.now.to_datetime, author: 'Ben Caneba')
