@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_23_132232) do
+ActiveRecord::Schema.define(version: 2018_07_10_035712) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(version: 2018_06_23_132232) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.index ["name"], name: "index_categories_on_name"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "article_id"
+    t.integer "item_id"
+    t.text "content"
+    t.index ["article_id"], name: "index_comments_on_article_id"
+    t.index ["item_id"], name: "index_comments_on_item_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "designers", force: :cascade do |t|

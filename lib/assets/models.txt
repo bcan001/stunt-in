@@ -90,6 +90,10 @@ to do:
 	- 'shop our favorites' scrollbar
 
 
+- browse the feed main search for index
+- filter area for main index
+
+
 
 
 
