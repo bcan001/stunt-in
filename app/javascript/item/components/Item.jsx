@@ -30,8 +30,11 @@ class Item extends React.Component {
       brand: '',
       posted_at: '',
       expires_at: '',
-      similar_items: []
+      similar_items: [],
+      comment: ''
     };
+    this.handleCommentChange = this.handleCommentChange.bind(this);
+    this.newCommentSubmit = this.newCommentSubmit.bind(this);
   }
 
   fetchSimilarItems (id) {
@@ -68,6 +71,22 @@ class Item extends React.Component {
   }
 
 
+  handleCommentChange (e) {
+    // console.log(this)
+    this.setState({
+      comment: e.target.value
+    });
+  }
+
+  newCommentSubmit (e) {
+    e.preventDefault();
+    console.log("submitted");
+    console.log(this);
+  }
+
+  
+
+
   render () {
     return (
       <div className='container pad20-top'>
@@ -102,7 +121,41 @@ class Item extends React.Component {
         </div>
 
         <div className="pad40-top">
-          comment here
+          <form style={{marginTop: "30px"}} onSubmit={this.newCommentSubmit}>
+
+            <div className='form-inputs'/>
+
+
+              <div className='row'>
+
+                <div className='col-sm-4'>
+
+                  <div className= 'form-group'>
+
+                    <input
+                      name="comment[content]"
+                      type="string"
+                      placeholder="Comment"
+                      value={this.state.comment}
+                      onChange={this.handleCommentChange}
+                      className="string form-control"
+                    />
+
+                  </div>
+
+                </div>
+
+              </div>
+      
+
+
+              <div className='row'>
+                <div className='col-sm-4'>
+                  <input type="submit" value="Save" className='btn btn-primary' />
+                </div>
+              </div>
+
+          </form>
         </div>
 
       </div>
