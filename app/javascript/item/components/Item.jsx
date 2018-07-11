@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import ItemDisplay from '../../items/components/ItemDisplay';
 
-import CommentForm from './CommentForm';
+// import CommentForm from './CommentForm';
 
 // const loadingStyle = {
 //   align: 'center'
