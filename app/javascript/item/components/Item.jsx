@@ -82,10 +82,21 @@ class Item extends React.Component {
     e.preventDefault();
     console.log("submitted");
     console.log(this);
+
+    var formData = {
+        'item_id' : this.state.id,
+        'content' : this.state.comment
+      }
+
+    axios.post("/comments", formData)
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+
   }
 
   
-
 
   render () {
     return (
