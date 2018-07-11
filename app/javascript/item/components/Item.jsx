@@ -5,6 +5,8 @@ import axios from 'axios';
 
 import ItemDisplay from '../../items/components/ItemDisplay';
 
+import CommentForm from './CommentForm';
+
 // const loadingStyle = {
 //   align: 'center'
 // };
@@ -99,9 +101,9 @@ class Item extends React.Component {
           Discussion
         </div>
 
-        
-
-        
+        <div className="pad40-top">
+          comment here
+        </div>
 
       </div>
     );
