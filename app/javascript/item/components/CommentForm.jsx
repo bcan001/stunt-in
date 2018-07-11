@@ -67,7 +67,7 @@
 
 // export default CommentForm;
 
-
+// https://www.webascender.com/blog/rails-react-forms-validations-real-time-updates/
 
 
 
