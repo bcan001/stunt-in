@@ -131,7 +131,7 @@ class Item extends React.Component {
           Discussion
         </div>
 
-        <div className="pad40-top">
+        <div className="pad40-top pad40-bottom">
           <form style={{marginTop: "30px"}} onSubmit={this.newCommentSubmit}>
 
             <div className='form-inputs'/>
@@ -139,14 +139,14 @@ class Item extends React.Component {
 
               <div className='row'>
 
-                <div className='col-sm-4'>
+                <div className='col-sm-5 offset-sm-3'>
 
                   <div className= 'form-group'>
 
                     <input
                       name="comment[content]"
                       type="string"
-                      placeholder="Comment"
+                      placeholder="Add a Comment"
                       value={this.state.comment}
                       onChange={this.handleCommentChange}
                       className="string form-control"
@@ -156,15 +156,13 @@ class Item extends React.Component {
 
                 </div>
 
+                <div className='col-sm-4'>
+                  <input type="submit" value="Comment" className='btn btn-primary' />
+                </div>
+
               </div>
       
 
-
-              <div className='row'>
-                <div className='col-sm-4'>
-                  <input type="submit" value="Save" className='btn btn-primary' />
-                </div>
-              </div>
 
           </form>
         </div>
