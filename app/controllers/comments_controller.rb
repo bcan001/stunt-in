@@ -6,7 +6,16 @@ class CommentsController < ApplicationController
 	end
 
 	def create
-		binding.pry
+		# binding.pry
+
+		@item = Item.find(params[:item_id])
+		@content = params['content']
+
+
+
+
+
+
 	end
 
 

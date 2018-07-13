@@ -31,7 +31,8 @@ class Item extends React.Component {
       posted_at: '',
       expires_at: '',
       similar_items: [],
-      comment: ''
+      comment: '',
+      comments: []
     };
     this.handleCommentChange = this.handleCommentChange.bind(this);
     this.newCommentSubmit = this.newCommentSubmit.bind(this);
@@ -92,7 +93,17 @@ class Item extends React.Component {
       .then(res => {
         console.log(res);
         console.log(res.data);
+
+        // add to existing comments prop array. STILL NEED TO LOAD CURRENT COMMENTS for this item
+        // need to implement user log in so that we know who posted a comment on an item.
+
+        
+
+
       })
+      .catch(error => {
+        console.error(error);
+      });
 
   }
 
@@ -131,7 +142,7 @@ class Item extends React.Component {
           Discussion
         </div>
 
-        <div className="pad40-top pad40-bottom">
+        <div className="pad40-top pad80-bottom">
           <form style={{marginTop: "30px"}} onSubmit={this.newCommentSubmit}>
 
             <div className='form-inputs'/>
