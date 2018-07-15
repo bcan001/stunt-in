@@ -38,6 +38,8 @@ RSpec.describe "the user sign up process", :type => :feature do
   # REACT HAS A DIFFERENT TEST SUITE AND DEPENDENCIES:
   # https://medium.freecodecamp.org/react-unit-testing-with-mocha-and-enzyme-77d18b6875cb
 
+  # USE THIS TUTORIAL:
+  # https://gist.github.com/andrewprogers/65f0228c262fbe8e1efe767527540aec
 
 
 end
