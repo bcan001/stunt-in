@@ -10,12 +10,32 @@ import axios from 'axios';
 // };
 
 const itemDisplayImageSize = {
-  height: '18rem'
+  height: '18rem',
+  // height: '200px',
+  backgroundColor: 'black'
 };
 
 const cardStyle = {
   height: '100%'
 };
+
+// const itemImageStyle = {
+//   height: '200px',
+//   backgroundColor: 'black'
+// }
+
+// const itemBoxStyle = {
+//   height: '100%'
+// }
+
+const itemNameLinkStyle = {
+  fontWeight: 'bold'
+}
+
+const itemPriceStyle = {
+  fontWeight: 'bold'
+}
+
 
 
 import itemDisplayImage from '../../../assets/images/item-placeholder.png';
@@ -57,15 +77,26 @@ class ItemDisplay extends React.Component {
 
   render () {
     return (
+
+
       <div className='col-sm-3 pad20-top pad20-bottom'>
         <div className='card' style={cardStyle}>
           <img src={itemDisplayImage} style={itemDisplayImageSize}/>
-          <a onClick={() => this.handleClick(this.state.item.id)} style={{cursor: 'pointer'}}>{this.state.item.name}</a>
-          <p>{this.state.item.price}</p>
-          <p>{this.state.item.posted_at}</p>
-          <p>{this.state.item.expires_at}</p>
+          <p className='pad10-left pad10-top'>how long ago</p>
+          
+          <a onClick={() => this.handleClick(this.state.item.id)} style={{cursor: 'pointer'}} className='pad10-left pad10-top'>{this.state.item.name}</a>
+          <p className='pad10-left pad10-top'>item description</p>
+          <div className="row pad15-top">
+            <div className="col-sm-8">
+              <p className='pad10-left item-price' style={itemPriceStyle}>{this.state.item.price}</p>
+            </div>
+            <div className="col-sm-4">
+              heart
+            </div>
+          </div>
         </div>
       </div>
+
     );
   }
 }
