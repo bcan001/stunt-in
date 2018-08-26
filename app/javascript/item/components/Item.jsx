@@ -53,8 +53,12 @@ class Item extends React.Component {
 
 
   componentDidMount () {
-    // console.log(this.state.item);
+    // console.log(this.props.itemData);
+    // var obj = JSON.parse(JSON.stringify(this.props.itemData));
+    // https://stackoverflow.com/questions/43712494/why-wont-my-nested-react-components-render
+
     // this.fetchItem(1);
+    // this.query_transmissions = JSON.parse(JSON.stringify(this.original_transmissions));
 
     this.setState({
       id: JSON.parse(this.props.itemData).id,
@@ -65,8 +69,11 @@ class Item extends React.Component {
       size: JSON.parse(this.props.itemData).size,
       brand: JSON.parse(this.props.itemData).brand,
       posted_at: JSON.parse(this.props.itemData).posted_at,
-      expires_at: JSON.parse(this.props.itemData).expires_at
+      expires_at: JSON.parse(this.props.itemData).expires_at,
+      comments: JSON.parse(this.props.itemData).comments
     });
+
+    // console.log(this.state.comments);
 
     this.fetchSimilarItems(JSON.parse(this.props.itemData).id);
   }
@@ -140,6 +147,16 @@ class Item extends React.Component {
 
         <div className="text-center pad40-top">
           Discussion
+        </div>
+
+        <div>
+          {this.state.comments.map((cmnt, index) => (
+            <div className='row' key={index}>
+              <div className='col-sm-12'>
+                {cmnt.content}, user_id: {cmnt.user_id}
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="pad40-top pad80-bottom">

@@ -2,7 +2,7 @@
   nil,
   id: "item",
   data: { 
-    item: @item
+    item: @item.to_json(:include => :comments)
   }
 %>
 <%= javascript_pack_tag 'item' %>
