@@ -18,6 +18,12 @@
   <body>
     <%= render 'layouts/main_topbar' %>
 
+    
+
+    <% if current_page?(root_path) %>
+      <%= render 'layouts/search_banner' %>
+    <% end %>
+
 
 
   

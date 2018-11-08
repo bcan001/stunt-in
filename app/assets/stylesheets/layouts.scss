@@ -1,0 +1,69 @@
+#search-navbar {
+  background-image: image-url('search-banner.png');
+  /*background-repeat: repeat-x;*/
+  /*width: 100%;*/
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.search-title-text {
+  color: white;
+  font-size:35px;
+  text-align: center;
+}
+
+/* support navbar on homepage */
+#search-navbar.navbar {
+  min-height: 400px;
+}
+
+#search-navbar.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+#search-navbar.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  #search-navbar.navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+}
+
+
+#search-actions-navbar.navbar {
+  min-height: 80px;
+}
+
+#search-actions-navbar.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+#search-actions-navbar.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  #search-actions-navbar.navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+}
+
+
+
+
