@@ -9,30 +9,6 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 
-    <ul class="navbar-nav mr-auto">
-
-      <li class="nav-item">
-        <%= link_to "Designers", root_path, class: 'nav-link' %>
-      </li>
-
-      <li class="nav-item">
-        <%= link_to "Outerwear", root_path, class: 'nav-link' %>
-      </li>
-
-      <li class="nav-item">
-        <%= link_to "Tops", root_path, class: 'nav-link' %>
-      </li>
-
-      <li class="nav-item">
-        <%= link_to "Bottoms", root_path, class: 'nav-link' %>
-      </li>
-
-      <li class="nav-item">
-        <%= link_to "Shoes", root_path, class: 'nav-link' %>
-      </li>
-   
-
-    </ul>
 
     <ul class="navbar-nav ml-auto">
 
@@ -58,13 +34,14 @@
     </ul>
 
 
-    <%= form_tag root_path, :method => :get, class: 'form-inline my-2 my-lg-0 search-form' do %>
-	    <%= text_field_tag 'search', '' ,placeholder: "Search STUNT'IN", class: 'form-control mr-sm-2' %>
+    <% unless current_page?(root_path) %>
+      <%= form_tag root_path, :method => :get, class: 'form-inline my-2 my-lg-0 search-form' do %>
+  	    <%= text_field_tag 'search', '' ,placeholder: "Search STUNT'IN", class: 'form-control mr-sm-2' %>
 
-	    <%= button_tag 'Search', class: 'btn btn-outline-success my-2 my-sm-0' %>
-	  <% end %>
+  	    <%= button_tag 'Search', class: 'btn btn-outline-success my-2 my-sm-0' %>
+  	  <% end %>
+    <% end %>
 
-	    
 
 
   </div>
