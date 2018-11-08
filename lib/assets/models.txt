@@ -94,6 +94,17 @@ to do:
 - filter area for main index
 
 
+- comments controller and creating new comments. should only be allowed to create a comment if there is a user signed in.
+
+- main search banner needs to be responsive when sizing down
+
+- put middle bar into the homepage 
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,60 @@
+<div class="container">
+
+  <div class="row pad40-top">
+    <div class="col-sm-12">
+      <h2 class="session-title">Log in</h2>
+    </div>
+  </div>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <div class="row pad20-top">
+      <div class="col-xs-12 col-sm-6 offset-sm-3">
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'session-text-field' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row pad20-top">
+      <div class="col-xs-12 col-sm-6 offset-sm-3">
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off", class: 'session-text-field' %>
+        </div>
+      </div>
+    </div>
+
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="row pad20-top">
+        <div class="col-xs-12 col-sm-6 offset-sm-3">
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        </div>
+      </div>
+    <% end -%>
+
+    <div class="row align-items-center justify-content-center pad20-top">
+      <div class="col-xs-12">
+        <div class="actions">
+          <%= f.submit "Log In" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="shared-links-container pad20-top">
+    <%= render "devise/shared/links" %>
+  </div>
+
+
+
+</div>
+
+
+
+
