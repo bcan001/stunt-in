@@ -14,5 +14,6 @@ Rails.application.routes.draw do
 
   resources :items
   resources :comments
+  resources :designers, only: [:index,:show]
   
 end

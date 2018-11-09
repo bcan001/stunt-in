@@ -4,20 +4,40 @@
       <div class="col-12">
         
 				<div class="row">
-		    	<div class="col-sm-12">
-		    		<div class="search-title-text pad30-right pad30-left">
+					<div class="col-sm-0 col-md-2">
+						&nbsp;
+					</div>
+		    	<div class="col-sm-12 col-md-8">
+		    		<div class="search-title-text">
 		    			Shop the world’s largest marketplace for men’s fashion and streetwear
 		    		</div>
 		    	</div>
+		    	<div class="col-sm-0 col-md-2">
+						&nbsp;
+					</div>
 		    </div>
 
 				<div style='text-align: center;'>
-			    <%= form_tag root_path, :method => :get, class: 'form-inline my-2 my-lg-0 search-form', style: 'display:inline-block;' do %>
-				    <%= text_field_tag 'search', '' ,placeholder: "Search STUNT'IN", class: 'form-control mr-sm-2 pad20-top', style: 'width:700px;' %>
+			    <%= form_tag root_path, :method => :get, class: '', style: 'display:inline-block;' do %>
 
-				    <div class="pad10-top">
-				   		<%= button_tag 'Search', class: 'btn btn-outline-success my-2 my-sm-0', style: 'color:black;background-color:white;' %>
+			    	<div class="row">
+
+			    		<div class="col-sm-12 col-md-12">
+		    				<div class="search-title-text">
+							    <%= text_field_tag 'search', '' ,placeholder: "Search STUNT'IN", class: 'form-control mr-sm-2 pad20-top', style: 'width:100%;' %>
+							  </div>
+
+							  <div class="pad10-top">
+							   	<%= button_tag 'Search', class: 'btn btn-outline-success my-2 my-sm-0', style: 'color:black;background-color:white;' %>
+							  </div>
+							</div>
+
+				
 				    </div>
+
+
+
+
 				  <% end %>
 
 			  </div>
